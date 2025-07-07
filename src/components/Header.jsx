@@ -33,7 +33,7 @@ const Header = () => {
             className="toggle-button"
             aria-label="Toggle Navigation"
           >
-            {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+            {isOpen ? <FiX size={50} /> : <FiMenu size={50} />}
           </button>
         </div>
       </div>
@@ -65,6 +65,7 @@ const Header = () => {
           <div className="nav-item"><span>Home</span></div>
           <div className="nav-item"><span>Services</span></div>
           <div className="nav-item"><span>About</span></div>
+           <div className="nav-item"><span>Projects</span></div>
           <div className="nav-item"><span>Contact Us</span></div>
         </div>
       </div>
