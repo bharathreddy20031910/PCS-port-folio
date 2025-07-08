@@ -7,12 +7,4 @@ export default defineConfig({
   plugins: [react(),tailwindcss(),],
   
 })
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        customBlue: '#3b94f8',
-      },
-    },
-  },
-}
+
