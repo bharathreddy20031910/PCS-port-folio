@@ -6,7 +6,6 @@
 
 @media (min-width: 768px) {
   .header-container {
-    padding: 2.5rem;
     flex-direction: row;
   }
 }
@@ -71,7 +70,7 @@
   align-items: center;
   justify-content: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
-    background-color:#21618c;
+    background-color:#3b94f8;
 }
 
 @media (min-width: 768px) {
@@ -125,7 +124,7 @@
 
 .nav-item {
   background-color: #cacfd2;
-  color: #21618c;
+  color: #2b2b2b;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   display: flex;
@@ -148,7 +147,7 @@
     margin-top: 1rem;
     gap: 1.5rem;
      clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
-     background-color: #21618c;
+     background-color: #3b94f8;
   }
 
   .nav-item {
@@ -270,4 +269,103 @@
 
 .info-box.social a:hover {
   color: #0077cc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+}
+
+.contact-form label {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #2b2b2b;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: #3b94f8;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 20px;
+    row-gap: 15px;
+    align-items: start;
+  }
+
+  .contact-form label {
+    grid-column: span 2;
+  }
+
+  .contact-form textarea {
+    grid-column: span 2;
+    width: 100%;
+    min-height: 150px;
+  }
+
+  .contact-form button {
+    grid-column: span 2;
+    width: 100%;
+    padding: 14px;
+    font-size: 22px;
+  }
+}
+
+.contact {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.complete {
+  width: 100%;
+  margin: auto;
+  justify-items: center;
+}
+
+.lottie-wrapper {
+  width: 50%;
+  max-width: 500px;
+}
+
+@media (max-width: 767px) {
+  .lottie-wrapper {
+    display: none; 
+  }
 }
