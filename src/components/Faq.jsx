@@ -140,4 +140,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
->>>>>>> e3db1cc9a680c61042b24e4db72e76ef8043f153
+
