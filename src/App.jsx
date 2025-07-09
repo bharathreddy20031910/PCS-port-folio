@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Contact from './components/Contact'
-
+import Faq from './components/Faq'
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
     <>
 <Header/>
 <Contact/>
+<Faq/>
     </>
   )
 }
