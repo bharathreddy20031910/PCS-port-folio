@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Contact from './components/Contact'
 import Faq from './components/Faq'
+import CardSection from './components/Cardsection'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
 <Header/>
+<CardSection/>
 <Contact/>
 <Faq/>
     </>
