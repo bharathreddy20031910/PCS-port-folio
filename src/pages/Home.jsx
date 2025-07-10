@@ -1,10 +1,18 @@
 import React from "react";
-import CardSection from "../components/cardSection/cardSection";
+import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
+import ServiceCard from "../components/ServiceCard/ServiceCard";
+import FAQ from "../components/Faq";
+import Contact from "../components/Contact";
 
 const Home = () => {
   return (
     <div>
-      <CardSection />
+      <Header />
+      <Hero />
+      <ServiceCard />
+      <FAQ />
+      <Contact />
     </div>
   )
 }
