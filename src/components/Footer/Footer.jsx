@@ -12,7 +12,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row lg:justify-between p-6 justify-center items-center md:items-start gap-5   text-center md:text-left">
           {/* Left Section - Brand and Description */}
           <div className="space-y-4 flex flex-col justify-center items-center md:items-start">
-            <h2 className="md:text-4xl text-2xl font-bold text-orange-500">
+            <h2 className="md:text-4xl text-2xl font-bold" style={{ color: '#3b94f8' }}>
               Company
             </h2>
             <p className="text-black text-sm leading-relaxed max-w-xs">
@@ -24,15 +24,33 @@ function Footer() {
 
             {/* Social Media Icons */}
             <div className="flex space-x-3 pt-2">
-              <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
-                <FaLinkedinIn className="text-white" />
+              <button
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3b94f8' }}
+                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
+                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
+              >
+              <FaLinkedinIn className="text-white" />
               </button>
-              <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
-                <AiFillInstagram className="text-white" />
+
+              <button 
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3b94f8' }}
+                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
+                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
+              >
+              <AiFillInstagram className="text-white" />
               </button>
-              <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+
+              <button
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3b94f8' }}
+                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
+                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
+              >
                 <IoLogoFacebook className="text-white" />
               </button>
+
             </div>
           </div>
 
@@ -103,7 +121,8 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 flex-shrink-0 cursor-pointer"
+                className="text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 flex-shrink-0 cursor-pointer hover:opacity-90"
+  style={{ backgroundColor: '#3b94f8' }}
               >
                 SUBMIT
               </button>

@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import FAQ from "../components/Faq";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ServiceCard />
       <FAQ />
       <Contact />
+      <Footer />
     </div>
   )
 }
