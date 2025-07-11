@@ -471,3 +471,14 @@
     font-size: 1rem;
   }
 }
+
+.header-container.transparent {
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container.scrolled {
+  background-color: whitesmoke;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

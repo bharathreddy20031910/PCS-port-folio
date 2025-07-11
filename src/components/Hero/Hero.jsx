@@ -1,35 +1,47 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+
 import './Hero.scss';
 
+import firstban from './firstban.png';
+import secondban from './secondban.jpg';
+import thirdban from './thirdban.jpg';
+
+const slides = [
+  { img: secondban },
+  { img: thirdban },
+  { img: firstban },
+];
+
 const Hero = () => {
-  const slides = [
-    'src/assets/firstban.jpg',
-    'src/assets/secondban.jpg',
-    'src/assets/thirdban.jpg',
-  ];
-
   return (
-    <section className="hero">
-      <Swiper className="hero__slider" loop autoplay>
-        {slides.map((img, index) => (
+    <section className="hero-section">
+      <Swiper
+        modules={[Pagination, EffectFade, Autoplay]}
+        effect="fade"
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        className="hero-swiper"
+      >
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="hero__slide"
-              style={{ backgroundImage: `url(${img})` }}
-            >
-              <div className="hero__overlay"></div>
+            <div className="slide">
+              <img src={slide.img} alt={`Slide ${index + 1}`} className="slide-bg" />
+              <div className="slide-overlay"></div>
 
-              <div className="hero__content">
-                <div className="hero__tag">Innovative IT Solutions</div>
-                <h1 className="hero__title">
-                  Empowering Digital Future, <br /> One solution at a time
+              <div className="slide-content">
+                <p className="tagline">Fleet Management</p>
+                <h1 className="headline">
+                  Reliable, Fast, And Secure Logistics Solutions
                 </h1>
-                <p className="hero__subtitle">
-                  Scalable IT services for modern businesses
+                <p className="subtext">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
-                <button className="hero__btn">Explore us</button>
+                <button className="cta-button">Our Solutions &raquo;</button>
               </div>
             </div>
           </SwiperSlide>

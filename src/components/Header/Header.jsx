@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   FiMenu,
   FiX,
@@ -14,10 +14,20 @@ import {
 import './Header.css'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="header-container">
+    <div className={`header-container ${scrolled ? 'scrolled' : 'transparent'}`}>
   
       <div className="left-section">
         <div className="logo-and-toggle">
