@@ -18,8 +18,6 @@ const Contact = () => {
     },
   ]);
 
-  const [openIndex, setOpenIndex] = useState(null);
-  const [newQuestion, setNewQuestion] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedQuestion, setEditedQuestion] = useState('');
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -32,24 +30,6 @@ const Contact = () => {
     e.preventDefault();
     alert('Message sent!');
     setForm({ name: '', email: '', phone: '', message: '' });
-  };
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const handleAddFAQ = (e) => {
-    e.preventDefault();
-    if (newQuestion.trim()) {
-      setFaqs([...faqs, {
-        question: newQuestion.trim(),
-        answer: 'Answer will be added soon.',
-        isUserAdded: true
-      }]);
-      setNewQuestion('');
-    } else {
-      alert("FAQ question can't be empty.");
-    }
   };
 
   const startEditing = (index) => {
@@ -102,7 +82,6 @@ const Contact = () => {
           </form>
         </div>
 
-        
         <div className="faq-container">
           <h2 className="faq-title">Frequently Asked Questions</h2>
           <div className="faq-list">
@@ -128,36 +107,15 @@ const Contact = () => {
                   </>
                 ) : (
                   <>
-                    <button className="faq-question" onClick={() => toggleFAQ(index)}>
-                      {faq.question}
-                    </button>
-                    {faq.isUserAdded && hoverIndex === index && (
-                      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem' }}>
-                        <button className="faq-button" onClick={() => startEditing(index)}>Edit</button>
-                        <button className="faq-button" onClick={() => deleteFAQ(index)}>Delete</button>
-                      </div>
+                    <div className="faq-question">{faq.question}</div>
+                    {hoverIndex === index && (
+                      <p className="faq-answer">{faq.answer}</p>
                     )}
                   </>
-                )}
-                {openIndex === index && (
-                  <p className="faq-answer">{faq.answer}</p>
                 )}
               </div>
             ))}
           </div>
-
-         
-          <form onSubmit={handleAddFAQ} className="faq-form">
-            <input
-              type="text"
-              placeholder="Enter your question"
-              value={newQuestion}
-              onChange={(e) => setNewQuestion(e.target.value)}
-              className="faq-input"
-              required
-            />
-            <button type="submit" className="faq-button">Add FAQ</button>
-          </form>
         </div>
       </div>
     </div>
