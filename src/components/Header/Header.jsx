@@ -9,7 +9,8 @@ import {
 import {
   FaFacebookF,
   FaTwitter,
-  FaInstagram
+  FaInstagram,
+  FaLinkedin
 } from 'react-icons/fa'
 import './Header.css'
 
@@ -20,11 +21,18 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);}
+  };
 
   return (
     <div className={`header-container ${scrolled ? 'scrolled' : 'transparent'}`}>
@@ -57,30 +65,29 @@ const Header = () => {
           </div>
           <div className="info-box">
             <FiMail className="info-icon" />
-            <span>support@pcsglobal.in</span>
+            <span>support@pcsgpl.com</span>
           </div>
           <div className="info-box">
             <FiHelpCircle className="info-icon" />
             <span>Need Help?</span>
           </div>
           <div className="info-box social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.facebook.com/hrpcsglobal/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://www.linkedin.com/company/pcs-global-pvt-ltd/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+            <a href="https://www.instagram.com/pcsglobalpvtltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           </div>
         </div>
 
        
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
-          <div className="nav-item"><span>Home</span></div>
-          <div className="nav-item"><span>Services</span></div>
-          <div className="nav-item"><span>About</span></div>
-           <div className="nav-item"><span>Projects</span></div>
-          <div className="nav-item"><span>Contact Us</span></div>
-        </div>
+          <div className="nav-item" onClick={() => scrollToSection('home')}><span>Home</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('services')}><span>Services</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('about')}><span>About</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('projects')}><span>Projects</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('contact')}><span>Contact Us</span></div></div>
       </div>
     </div>
   )
 }
 
-export default Header
+export default Header;

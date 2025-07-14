@@ -9,53 +9,39 @@ import "swiper/css";
 
 const reviews = [
   {
-    name: "Ana Rhodes",
-    company: "Google",
-    rating: 3,
-    text: "Clean and commented code, beautiful design, and really not hard to work with",
+    name: "Priya Sharma",
+    company: "Co-founder, EduBridge Academy",
+    rating: 5,
+    text: "Reliable hosting and prompt support! We shifted our legacy system to PCS Global’s cloud-hosted infrastructure and the transition was seamless. No downtime, no stress.",
     img: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
-    name: "Morris Clarke",
-    company: "IBM",
-    rating: 4,
-    text: "Clean and commented code, beautiful design, and really not hard to work with",
+    name: "Abhijit Roy",
+    company: "Operations Head, UrbanX Facilities",
+    rating: 4.1,
+    text: "IoT automation from PCS Global helped us improve operational efficiency. Their custom IoT deployment saved us time, effort, and money. We can now track everything in real time.",
     img: "https://randomuser.me/api/portraits/men/2.jpg",
   },
   {
-    name: "Ana Rhodes",
-    company: "Google",
+    name: "Shalini Mehta",
+    company: "Founder, LegalInnova Pvt. Ltd.",
     rating: 4.7,
-    text: "Clean and commented code, beautiful design, and really not hard to work with",
+    text: "They took care of all our legal headaches. From registering our Pvt. Ltd. company to handling all documentation, PCS Global made our startup journey hassle-free.",
     img: "https://randomuser.me/api/portraits/women/3.jpg",
   },
   {
-    name: "Ana Rhodes",
-    company: "Google",
+    name: "Sandeep Ghosh",
+    company: "Marketing Manager, Finovate Solutions",
     rating: 4.7,
-    text: "Clean and commented code, beautiful design, and really not hard to work with",
+    text: "Amazing digital marketing team! Their content and social media team helped our brand get noticed. We’ve seen a solid increase in engagement and leads.",
     img: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    name: "James Carter",
-    company: "Upwork",
+    name: "Neha Jain",
+    company: "CEO, StartRight Enterprises",
     rating: 5,
-    text: "Superb work and amazing UI! Highly recommend.",
+    text: "One-stop solution for startups! We used PCS Global for everything—hosting, website, legal registration, and marketing. They guided us like a true business partner.",
     img: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    name: "Sara Ali",
-    company: "Netflix",
-    rating: 4.2,
-    text: "Crisp design and highly maintainable code.",
-    img: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    name: "John Doe",
-    company: "NGINX",
-    rating: 4.8,
-    text: "Slick UX with solid coding practices. A+",
-    img: "https://randomuser.me/api/portraits/men/7.jpg",
   },
 ];
 
@@ -73,7 +59,7 @@ const CustomerRev = () => {
     <section className="py-16 px-4 bg-gray-50">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800">Customers Review</h2>
-        <p className="text-sm text-gray-500">What our customers say about grona template</p>
+        <p className="text-sm text-gray-500">What Our Clients Says About US</p>
         <div className="mt-2 w-10 h-1 bg-pink-600 mx-auto rounded-full" />
       </div>
 

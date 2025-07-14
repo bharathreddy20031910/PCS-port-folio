@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -18,6 +18,15 @@ const slides = [
 ];
 
 const Hero = () => {
+  const [setIsOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);}
+  };
+
   return (
     <section className="hero-section">
       <Swiper
@@ -34,14 +43,14 @@ const Hero = () => {
               <div className="slide-overlay"></div>
 
               <div className="slide-content">
-                <p className="tagline">Fleet Management</p>
+                <p className="tagline">Business Solutions & IT Services</p>
                 <h1 className="headline">
-                  Reliable, Fast, And Secure Logistics Solutions
+                  Smart Solutions. Secure Systems. Scalable Success.
                 </h1>
                 <p className="subtext">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Upscale your Business, with secured personalized digital and ironclad security in era of digital realm, protect your business, and expand your domain, around the clock support,  all under one roof. 
                 </p>
-                <button className="cta-button">Our Solutions &raquo;</button>
+                <button className="cta-button" onClick={() => scrollToSection('contact')}>Contact Us &raquo;</button>
               </div>
             </div>
           </SwiperSlide>

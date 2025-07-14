@@ -16,10 +16,7 @@ function Footer() {
               Company
             </h2>
             <p className="text-black text-sm leading-relaxed max-w-xs">
-              Discover a wide range of delicious dishes crafted with the finest
-              ingredients. From appetizers to desserts, we have something for
-              everyone. Explore our menu and indulge in a culinary experience
-              like no other.
+              At PCS Global, we empower startups and struggling businesses with everything they need to succeed — from secure hosting, custom web applications, IoT integration, legal setup, to digital marketing and 24/7 support.
             </p>
 
             {/* Social Media Icons */}
@@ -75,13 +72,13 @@ function Footer() {
                 href="#"
                 className=" transition-colors text-sm"
               >
-                Delivery
+                Project
               </a>
               <a
                 href="#"
                 className="transition-colors text-sm"
               >
-                Privacy policy
+                Privacy Policy
               </a>
             </nav>
           </div>
@@ -90,8 +87,8 @@ function Footer() {
           <div className="space-y-4 text-gray-700 hover:text-gray-500">
             <h3 className="text-lg font-semibold pt-3">GET IN TOUCH</h3>
             <div className="space-y-2">
-              <p className=" text-sm">+1-212-456-7890</p>
-              <p className=" text-sm">contact@pcsglobal.dev</p>
+              <p className=" text-sm">+91 6296373387</p>
+              <p className=" text-sm">contact@pcsgpl.com</p>
             </div>
           </div>
           </div>

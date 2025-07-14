@@ -4,20 +4,18 @@ import Hero from "../components/Hero/Hero";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import Counter from "../components/Counter/Counter";
 import CustomerRev from "../components/CustomerRev/CustomerRev";
-import FAQ from "../components/Faq";
-import Contact from "../components/Contact";
+import Contact from "../components/Header/Contact";
 import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <Hero />
-      <ServiceCard />
-      <Counter />
-      <CustomerRev />
-      <FAQ />
-      <Contact />
+      <section id="home" className="section scroll-mt-28"><Hero /></section>
+      <section id="services" className="section scroll-mt-28"><ServiceCard /></section>
+      <section id="about" className="section scroll-mt-28"><Counter /></section>
+      <section id="projects" className="section scroll-mt-28"><CustomerRev /></section>
+      <section id="contact" className="section scroll-mt-28"><Contact /></section>
       <Footer />
     </div>
   )
