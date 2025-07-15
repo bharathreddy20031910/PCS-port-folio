@@ -65,7 +65,9 @@ const Header = () => {
           </div>
           <div className="info-box">
             <FiMail className="info-icon" />
-            <span>support@pcsgpl.com</span>
+            <a href="mailto:support@pcsgpl.com" className="email-link">
+              <span>support@pcsgpl.com</span>
+            </a>
           </div>
           <div className="info-box">
             <FiHelpCircle className="info-icon" />

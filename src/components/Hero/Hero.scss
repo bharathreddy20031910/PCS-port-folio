@@ -1,50 +1,48 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 
   .hero-swiper {
     width: 100%;
-    height: 100vh;
+    height: 82vh;
 
     .swiper-slide {
-      height: 100vh !important;
+      height: 82vh !important;
     }
 
     .swiper-pagination {
       position: absolute;
       top: 50%;
       right: 15px;
-      transform: translateY(-50%);
+      transform: translateY(-40%);
+      transform: translateX(96%);
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      z-index: 30;
+      gap: 10px;
 
       .swiper-pagination-bullet {
         background: white;
         opacity: 0.5;
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         transition: 0.3s ease;
-
-        @media (min-width: 768px) {
-          width: 10px;
-          height: 10px;
-        }
       }
 
       .swiper-pagination-bullet-active {
         opacity: 1;
-        background: #3b94f8;
       }
+    }
 
-      @media (max-width: 640px) {
-        right: 10px;
-        gap: 6px;
+    @media screen { 
+      @media (max-width: 768px) {
+        .hero-swiper {
+          height: 100vh !important;
+          width: 100%;
+        }
       }
+      
     }
   }
 
@@ -66,68 +64,53 @@
       inset: 0;
       background-color: rgba(0, 0, 0, 0.6);
       z-index: 10;
-
-      @media (max-width: 640px) {
-        background-color: rgba(0, 0, 0, 0.7);
-      }
     }
 
     .slide-content {
       position: absolute;
       top: 50%;
-      left: 0;
-      right: 0;
+      
       transform: translateY(-50%);
       z-index: 20;
       color: white;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 50vh;
-
-      @media (max-width: 640px) {
-        padding: 0 1rem;
-        min-height: 60vh;
-      }
+      flex-direction: column;
+      gap: 15px;
+      transform: scale(1.1);
+      margin-top: -130px;
 
       .tagline {
         text-transform: uppercase;
-        color: #e5e5e5;
+        font-size: 14px;
+        color: #ccc;
         letter-spacing: 1px;
-        font-weight: 500;
+      }
 
-        @media (max-width: 640px) {
-          letter-spacing: 0.5px;
-        }
+      .headline {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
+
+      .subtext {
+        font-size: 16px;
+        color: #ccc;
       }
 
       .cta-button {
         background-color: #3b94f8;
         border: none;
         color: white;
-        padding: 12px 24px;
+        padding: 10px 20px;
         font-size: 14px;
         font-weight: 600;
-        border-radius: 8px;
+        border-radius: 5px;
         cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-
-        @media (max-width: 640px) {
-          padding: 14px 20px;
-          font-size: 16px;
-          border-radius: 6px;
-        }
+        transition: background-color 0.3s ease;
+        width: 385px;
 
         &:hover {
-          background-color: #2563eb;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(59, 148, 248, 0.3);
-        }
-
-        &:active {
-          transform: translateY(0);
+          background-color: skyblue;
         }
       }
     }

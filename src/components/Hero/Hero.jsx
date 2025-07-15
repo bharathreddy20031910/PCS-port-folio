@@ -11,7 +11,7 @@ import firstban from "./firstban.png";
 import secondban from "./secondban.jpg";
 import thirdban from "./thirdban.jpg";
 
-const slides = [{ img: firstban }, { img: secondban }, { img: thirdban }];
+const slides = [{ img: secondban }, { img: firstban }, { img: thirdban }];
 
 const Hero = () => {
   const [setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero-section">
+    <section className="hero-section min-h-[70vh] md:h-[100vh] relative overflow-hidden">
       <Swiper
         modules={[Pagination, EffectFade, Autoplay]}
         effect="fade"
@@ -44,19 +44,19 @@ const Hero = () => {
               <div className="slide-overlay"></div>
 
               <div className="slide-content">
-                <div className="px-4 sm:px-6 md:px-8 lg:px-12 my-6 sm:my-8 md:my-10 flex flex-col gap-3 sm:gap-4 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl w-full">
-                  <p className="tagline text-xs sm:text-sm">Business Solutions & IT Services</p>
-                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+                <div className="pl-4 md:pl-12 my-10 flex flex-col gap-3 max-w-xl min-w-[]">
+                  <p className="tagline">Business Solutions & IT Services</p>
+                  <h1 className="text-2xl font-bold md:text-3xl lg:text-[2rem]">
                     Smart Solutions. Secure Systems. Scalable Success.
-                  </div>
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-200">
+                  </h1>
+                  <p className="text-[0.9rem] md:text-[0.95rem] md:my-2">
                     Upscale your Business, with secured personalized digital and
                     ironclad security in era of digital realm, protect your
                     business, and expand your domain, around the clock support,
                     all under one roof.
                   </p>
                   <button
-                    className="cta-button w-full sm:w-auto max-w-xs"
+                    className="cta-button"
                     onClick={() => scrollToSection("contact")}
                   >
                     Contact Us &raquo;

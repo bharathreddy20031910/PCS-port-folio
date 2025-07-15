@@ -2,11 +2,12 @@ import React from 'react'
 import { FaLinkedinIn} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { IoLogoFacebook } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <div>
-        <div className=" bg-[#f4eff4] py-5 mt-20" id="contactUs">
+        <div className=" bg-[#f4eff4] py-5 md:mt-20" id="contactUs">
       <div className="max-w-6xl mx-auto">
         
         <div className="flex flex-col md:flex-row lg:justify-between p-6 justify-center items-center md:items-start gap-5   text-center md:text-left">
@@ -21,13 +22,16 @@ function Footer() {
 
             {/* Social Media Icons */}
             <div className="flex space-x-3 pt-2">
+              
               <button
                 className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
                 style={{ backgroundColor: '#3b94f8' }}
                 onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
                 onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
               >
+              <Link to="https://www.linkedin.com/company/pcs-global-pvt-ltd/" target="_blank">
               <FaLinkedinIn className="text-white" />
+              </Link>
               </button>
 
               <button 
@@ -36,7 +40,9 @@ function Footer() {
                 onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
                 onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
               >
+              <Link to="https://www.instagram.com/pcsglobalpvtltd/" target="_blank" >
               <AiFillInstagram className="text-white" />
+              </Link>
               </button>
 
               <button
@@ -45,7 +51,9 @@ function Footer() {
                 onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357edb')}
                 onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#3b94f8')}
               >
+                <Link to="https://www.facebook.com/hrpcsglobal/" target="_blank">
                 <IoLogoFacebook className="text-white" />
+              </Link>
               </button>
 
             </div>
@@ -108,17 +116,17 @@ function Footer() {
           </div>
 
           {/* Right side - Email form */}
-          <div className="w-full md:w-auto">
-            <form className="flex items-center bg-white rounded-full overflow-hidden shadow-lg max-w-md mx-auto md:mx-0">
+          <div className="w-[200px] lg:w-[400px]">
+            <form className="flex items-center bg-white rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
               <input
                 type="email"
                 placeholder="Enter email address"
                 className="flex-1 px-6 py-2 text-gray-600 placeholder-gray-400 focus:outline-none focus:ring-0 bg-transparent md:w-200"
                 required
-              />
+              /> 
               <button
                 type="submit"
-                className="text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 flex-shrink-0 cursor-pointer hover:opacity-90"
+                className="text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300 cursor-pointer hover:opacity-90"
   style={{ backgroundColor: '#3b94f8' }}
               >
                 SUBMIT
