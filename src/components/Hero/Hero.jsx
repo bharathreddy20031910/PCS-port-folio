@@ -44,7 +44,7 @@ const Hero = () => {
               <div className="slide-overlay"></div>
 
               <div className="slide-content">
-                <div className="pl-4 md:pl-12 my-10 flex flex-col gap-3 max-w-xl min-w-[]">
+                <div className="px-9 md:px-10  my-10 flex flex-col flex-wrap gap-3 max-w-xl ">
                   <p className="tagline">Business Solutions & IT Services</p>
                   <h1 className="text-2xl font-bold md:text-3xl lg:text-[2rem]">
                     Smart Solutions. Secure Systems. Scalable Success.
@@ -56,7 +56,7 @@ const Hero = () => {
                     all under one roof.
                   </p>
                   <button
-                    className="cta-button"
+                    className="cta-button w-[95%] md:w-[350px]"
                     onClick={() => scrollToSection("contact")}
                   >
                     Contact Us &raquo;

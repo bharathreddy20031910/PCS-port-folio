@@ -49,6 +49,7 @@
   .slide {
     position: relative;
     width: 100%;
+   
     height: 100%;
 
     .slide-bg {
@@ -107,7 +108,7 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        width: 385px;
+       
 
         &:hover {
           background-color: skyblue;
