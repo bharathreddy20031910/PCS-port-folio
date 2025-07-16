@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
-    background-color:#3b94f8;
+    /* background-color:#3b94f8; */
 }
 
 @media (min-width: 768px) {
@@ -270,7 +270,7 @@
 }
 
 .info-box.social a {
-  color: #333;
+  color: inherit;
   font-size: 18px;
   transition: color 0.3s;
 }
@@ -449,6 +449,7 @@
 
 .header-container.transparent {
   background-color: transparent;
+  color: white;
   box-shadow: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -458,23 +459,21 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.header-container.scrolled .toggle-button {
+  color: #3b94f8;
+}
 
 .header-container.transparent {
   background-color: transparent;
   color: white;
 }
 
-.header-container.scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
 .header-container .info-boxes span,
 .header-container .info-icon,
 .header-container .nav-links span,
 .header-container .social a,
 .header-container .toggle-button svg {
-  color: inherit;
+  /* color: black; */
   transition: color 0.3s ease;
 }
 .header-container {
