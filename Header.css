@@ -18,6 +18,10 @@
   background-color: transparent;
   color: white;
 }
+.header-container.transparent .info-box a{
+  background-color: transparent;
+  color: white;
+}
 
 .header-container.scrolled {
   background-color: white;
@@ -29,7 +33,6 @@
 .header-container .info-boxes span,
 .header-container .info-icon,
 .header-container .nav-links span,
-.header-container .social a,
 .header-container .toggle-button svg {
   color: inherit;
   transition: color 0.3s ease;
@@ -176,7 +179,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
-  color: inherit;
+  color: white;
 }
 
 .info-icon {
@@ -184,8 +187,9 @@
   color: inherit;
 }
 
-.info-box.social {
+.info-box social {
   gap: 1rem;
+  color: white;
 }
 
 .info-box.social a {

@@ -1,7 +1,6 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 
   .hero-swiper {
@@ -50,6 +49,7 @@
   .slide {
     position: relative;
     width: 100%;
+   
     height: 100%;
 
     .slide-bg {
@@ -70,15 +70,13 @@
     .slide-content {
       position: absolute;
       top: 50%;
-      left: 40px;
+      
       transform: translateY(-50%);
       z-index: 20;
       color: white;
-      max-width: 500px;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      padding: 0 20px;
       transform: scale(1.1);
       margin-top: -130px;
 
@@ -110,7 +108,7 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        width: 385px;
+       
 
         &:hover {
           background-color: skyblue;

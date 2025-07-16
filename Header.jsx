@@ -64,7 +64,7 @@ const Header = () => {
             <span>Need Help?</span>
           </div>
           <div className="info-box social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF  /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           </div>

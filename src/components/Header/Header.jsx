@@ -51,7 +51,7 @@ const Header = () => {
             className="toggle-button"
             aria-label="Toggle Navigation"
           >
-            {isOpen ? <FiX size={50} /> : <FiMenu size={50} />}
+            {isOpen ? <FiX size={40} /> : <FiMenu size={40} />}
           </button>
         </div>
       </div>
@@ -65,7 +65,9 @@ const Header = () => {
           </div>
           <div className="info-box">
             <FiMail className="info-icon" />
-            <span>support@pcsgpl.com</span>
+            <a href="mailto:support@pcsgpl.com" className="email-link">
+              <span>support@pcsgpl.com</span>
+            </a>
           </div>
           <div className="info-box">
             <FiHelpCircle className="info-icon" />
