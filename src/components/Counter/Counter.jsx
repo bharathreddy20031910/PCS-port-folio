@@ -73,8 +73,8 @@ const Counter = () => {
 
         {/* Right Text Section */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
-            15 Years <br /> <span className="text-blue-900">Experience</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-700 leading-tight">
+            15 Years <br /> <span className="text-gray-700">Experience</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-md mx-auto">
             Our company has been one of the leading provider of Business Consultations 

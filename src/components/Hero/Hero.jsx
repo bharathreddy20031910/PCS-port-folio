@@ -7,11 +7,12 @@ import "swiper/css/effect-fade";
 
 import "./Hero.scss";
 
-import firstban from "./firstban.png";
+import firstban from "./firstban.webp";
 import secondban from "./secondban.jpg";
 import thirdban from "./thirdban.jpg";
+import imgOne from "./imgOne.webp"
 
-const slides = [{ img: secondban }, { img: firstban }, { img: thirdban }];
+const slides = [ { img: firstban }, { img: imgOne }];
 
 const Hero = () => {
   const [setIsOpen] = useState(false);

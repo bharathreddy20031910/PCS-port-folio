@@ -13,8 +13,8 @@ function Footer() {
             {/* Left Section - Brand and Description */}
             <div className="space-y-4 flex flex-col justify-center items-center md:items-start">
               <h2
-                className="md:text-4xl text-2xl font-bold"
-                style={{ color: "#3b94f8" }}
+                className="md:text-4xl text-2xl font-bold text-gray-800"
+               
               >
                 Company
               </h2>
