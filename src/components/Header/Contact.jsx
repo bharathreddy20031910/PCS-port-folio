@@ -58,7 +58,7 @@ const Contact = () => {
 
   return (
     <div className='complete'>
-      <h1 className='text-5xl p-3 text-sky-500 text-center' style={{ fontFamily: 'Poppins', fontWeight: 'bold' }}>
+      <h1 className='text-4xl p-3 text-gray-800 text-center' style={{ fontWeight: 'bold' }}>
         Connect with us
       </h1>
 
