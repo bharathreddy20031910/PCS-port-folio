@@ -38,10 +38,27 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Message sent!');
-    setForm({ name: '', email: '', phone: '', message: '' });
+    try {
+    const res = await fetch("https://pcsgpl.com/contact.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      setForm({ name: '', email: '', phone: '', message: '' });
+    } else {
+      alert("Failed to send message: " + data.message);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong!");
+  }
   };
 
   const saveEditedQuestion = (index) => {
