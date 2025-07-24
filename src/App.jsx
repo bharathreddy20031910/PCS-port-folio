@@ -13,7 +13,9 @@ function App() {
     <>
 <Header/>
 <CardSection/>
-<Contact/>
+    <section id="contact" className="section scroll-mt-28">
+        <Contact />
+      </section>
 
     </>
   )

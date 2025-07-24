@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   FiMenu,
   FiX,
@@ -14,16 +14,33 @@ import {
 import './Header.css'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false); 
+    }
+  };
 
   return (
-    <div className="header-container">
-  
+    <div className={`header-container ${scrolled ? 'scrolled' : 'transparent'}`}>
       <div className="left-section">
         <div className="logo-and-toggle">
           <div className="logo-container">
             <img
-              src="https://www.pcsglobal.in/assets/images/Logo%20Pcs%20global.jpg"
+              src="./src/assets/logo.webp"
               alt="PCS Global Logo"
               className="logo"
             />
@@ -38,20 +55,19 @@ const Header = () => {
         </div>
       </div>
 
- 
       <div className="right-section">
         <div className="info-boxes">
           <div className="info-box">
             <FiMapPin className="info-icon" />
-            <span>Kolkata, India</span>
-          </div>
-          <div className="info-box">
-            <FiHelpCircle className="info-icon" />
-            <span>Need Help?</span>
+            <span>Merlin Infinite, Sector V, Saltlake, Kolkata, West Bengal</span>
           </div>
           <div className="info-box">
             <FiMail className="info-icon" />
             <span>support@pcsglobal.in</span>
+          </div>
+          <div className="info-box">
+            <FiHelpCircle className="info-icon" />
+            <span>Need Help?</span>
           </div>
           <div className="info-box social">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
@@ -60,17 +76,16 @@ const Header = () => {
           </div>
         </div>
 
-       
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
-          <div className="nav-item"><span>Home</span></div>
-          <div className="nav-item"><span>Services</span></div>
-          <div className="nav-item"><span>About</span></div>
-           <div className="nav-item"><span>Projects</span></div>
-          <div className="nav-item"><span>Contact Us</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('home')}><span>Home</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('services')}><span>Services</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('about')}><span>About</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('projects')}><span>Projects</span></div>
+          <div className="nav-item" onClick={() => scrollToSection('contact')}><span>Contact Us</span></div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

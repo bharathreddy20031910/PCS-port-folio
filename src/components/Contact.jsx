@@ -83,7 +83,7 @@ const Contact = () => {
         </div>
 
         <div className="faq-container">
-          <h2 className="faq-title">Frequently Asked Questions</h2>
+          <h2 className="faq-title">FAQ's..?</h2>
           <div className="faq-list">
             {faqs.map((faq, index) => (
               <div
