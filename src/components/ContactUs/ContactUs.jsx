@@ -1,12 +1,11 @@
 import { useState } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
+import { div } from "framer-motion/client";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropup } from "react-icons/io";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -21,14 +20,38 @@ function ContactUs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const faqs = [
-    "What hosting solutions does PCS Global provide?",
-    "Do you develop custom web applications?",
-    "Can you help with SSL certificate setup and renewal?",
-    "What IoT solutions do you offer?",
-    "Do you offer legal services for new businesses?",
-    "What digital marketing services do you provide?"
-  ]
+  const [faqs, setFaqs] = useState([
+    {
+      question: "What hosting solutions does PCS Global provide?",
+      answer:
+        "We offer stable and secure hosting solutions for businesses of all sizes. Whether you're launching a new website or migrating an existing one, our cloud-backed infrastructure ensures maximum uptime and performance.",
+    },
+    {
+      question: "Do you develop custom web applications?",
+      answer:
+        "Yes. We build scalable and secure web applications using Java, Python, and the MERN stack. We also support platforms like WordPress, Shopify, and WooCommerce to meet diverse business needs.",
+    },
+    {
+      question: "Can you help with SSL certificate setup and renewal?",
+      answer:
+        "Absolutely. We handle the complete SSL process—from installation to timely renewal—so your website stays secure and trusted by users and search engines.",
+    },
+    {
+      question: "What IoT solutions do you offer?",
+      answer:
+        "Our IoT services include designing and deploying custom device networks that improve operational efficiency, enable real-time data insights, and automate decision-making processes for businesses.",
+    },
+    {
+      question: "Do you offer legal services for new businesses?",
+      answer:
+        "Yes, we assist with legal setup for startups and small businesses, including registering Private Limited and Proprietorship firms, so you can focus on growth while we handle the paperwork.",
+    },
+    {
+      question: "What digital marketing services do you provide?",
+      answer:
+        "We create and manage content-driven digital marketing campaigns, including social media marketing, ad creatives, posters, and lead generation to boost your brand’s online presence.",
+    },
+  ]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +65,6 @@ function ContactUs() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setSubmitted(true);
@@ -60,6 +82,22 @@ function ContactUs() {
         message: "",
       });
     }, 3000);
+  };
+
+  // faq toggle functionality approach in Simple English
+  // first we will create a state variable to keep track of which faq is currently clicked
+  // then we will create a function that will toggle the clicked faq
+  // if the clicked faq is already open, we will close it by setting the state variable to null
+  // if the clicked faq is not open, we will open it by setting the state variable to the index of the clicked faq
+
+  const [faqIdx, setFaqIdx] = useState(null);
+
+  const handleFaqClick = (idx) => {
+    if (faqIdx === idx) {
+      setFaqIdx(null);
+    } else {
+      setFaqIdx(idx);
+    }
   };
 
   if (submitted) {
@@ -96,10 +134,14 @@ function ContactUs() {
     <div>
       <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-            <div className="text-center my-12">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-3">Connect with us</h1>
-                <p className="text-lg text-gray-500">Any question or remarks? Just write us a message!</p>
-                </div>
+          <div className="text-center my-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-3">
+              Connect with us
+            </h1>
+            <p className="text-lg text-gray-500">
+              Any question or remarks? Just write us a message!
+            </p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information Card */}
             <div className="relative">
@@ -312,16 +354,46 @@ function ContactUs() {
 
         {/* FAQ Section */}
         <div className="my-20 max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold my-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold my-12">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-4">
+            {faqs.map((faq, index) => {
+              return (
+                <div key={index}>
+                  <div
+                    onClick={() => {
+                      handleFaqClick(index);
+                    }}
+                    className={`flex items-center justify-between bg-gray-100 p-4 shadow hover:bg-gray-200 transition-colors duration-500 cursor-pointer ${faqIdx ===index ? "rounded-t-lg bg-gray-200 shadow-md" : "rounded-lg"} `}
+                  >
+                    <div>
 
-            {faqs.map((faq,i)=>{
-                return (
-                    <div key={i} className="border-b pb-4 border-gray-200">
-              <h3 className="font-semibold"> {faq}</h3>
-              <p className="text-gray-600"> answer will be here </p>
-            </div>
-                )
+                    {faq.question}
+                    </div>
+
+                    <div>
+                      {faqIdx === index ? (
+                        <>
+                          <IoMdArrowDropup className="text-2xl text-gray-700" />
+                        </>
+                      ) : (
+                        <>
+                          <IoMdArrowDropdown className="text-2xl text-gray-700" />
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* answer div */}
+
+                  {faqIdx === index && 
+                  <div className="bg-gray-200 p-4 rounded-b-lg shadow border-t-gray-200 ">{faq.answer}</div>
+                  }
+
+      
+                </div>
+              );
             })}
           </div>
         </div>
