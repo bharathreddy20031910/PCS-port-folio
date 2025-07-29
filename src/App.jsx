@@ -1,24 +1,22 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Privacypolicy from './components/Privacypolicy';
+import ReturnRefund from './components/Return-Refund';
+import TermsConditions from './components/Terms-Conditions';
 
 
-import './App.css'
-import Header from './components/Header'
-import Contact from './components/Contact'
-import CardSection from './components/Cardsection'
 
 function App() {
-
-
   return (
-    <>
-<Header/>
-<CardSection/>
-    <section id="contact" className="section scroll-mt-28">
-        <Contact />
-      </section>
-
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/privacypolicy" element={<Privacypolicy />} />
+        <Route path="/return" element={<ReturnRefund />} />
+         <Route path="/terms" element={<TermsConditions />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

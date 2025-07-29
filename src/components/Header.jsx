@@ -12,10 +12,12 @@ import {
   FaInstagram
 } from 'react-icons/fa'
 import './Header.css'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,6 +84,7 @@ const Header = () => {
           <div className="nav-item" onClick={() => scrollToSection('about')}><span>About</span></div>
           <div className="nav-item" onClick={() => scrollToSection('projects')}><span>Projects</span></div>
           <div className="nav-item" onClick={() => scrollToSection('contact')}><span>Contact Us</span></div>
+          <div className="nav-item"  onClick={() => navigate('/privacypolicy')}><span>Privacy policy</span></div>
         </div>
       </div>
     </div>
