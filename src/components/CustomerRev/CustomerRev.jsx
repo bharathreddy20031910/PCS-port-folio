@@ -1,4 +1,3 @@
-// src/components/CustomerRev.jsx
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -77,8 +76,6 @@ const CustomerRev = () => {
       >
         {reviews.map((review, index) => {
           const isEven = index % 2 === 0;
-          // const bgClass = isEven ? "bg-white" : "bg-white";
-          // const textColor = isEven ? "text-gray-800" : "text-gray-800";
 
           return (
             <SwiperSlide key={index} className="h-[100px] my-10" >

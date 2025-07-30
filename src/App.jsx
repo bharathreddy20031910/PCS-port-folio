@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import TermsConditions from "./pages/Terms-Conditions";
 import ReturnRefund from "./pages/Return-Refund";
 import OurKnowledge3 from "./pages/OurKnowledge";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/return-refund" element={<ReturnRefund />} />
         <Route path="/our-knowledge" element={<OurKnowledge3 />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
       <footer>
