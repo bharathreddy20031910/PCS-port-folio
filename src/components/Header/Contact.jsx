@@ -39,27 +39,31 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-    const res = await fetch("https://pcsgpl.com/contact.php", {
+  e.preventDefault();
+  const { name, email, phone, message } = form;
+  const data = { name, email, phone, message };
+
+  try {
+    const res = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify(data), // ✅ using correct variable
     });
 
-    const data = await res.json();
+    const response = await res.json();
 
-    if (data.success) {
+    if (res.ok) {
       alert("Message sent successfully!");
-      setForm({ name: '', email: '', phone: '', message: '' });
+      setForm({ name: '', email: '', phone: '', message: '' }); // reset form
     } else {
-      alert("Failed to send message: " + data.message);
+      alert("Error: " + response.error);
     }
   } catch (error) {
-    console.error("Error:", error);
-    alert("Something went wrong!");
+    alert("Network error.");
+    console.error(error);
   }
-  };
+};
+
 
   const saveEditedQuestion = (index) => {
     if (editedQuestion.trim()) {

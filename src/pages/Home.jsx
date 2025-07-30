@@ -10,13 +10,11 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
   return (
     <div>
-      <Header />
       <section id="home" className="section scroll-mt-28"><Hero /></section>
       <section id="services" className="section scroll-mt-28"><ServiceCard /></section>
       <section id="about" className="section scroll-mt-28"><Counter /></section>
       <section id="projects" className="section scroll-mt-28"><CustomerRev /></section>
       <section id="contact" className="section scroll-mt-28"><Contact /></section>
-      <Footer />
     </div>
   )
 }

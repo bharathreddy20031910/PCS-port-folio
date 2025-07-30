@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import Logo from './logo.webp';
 import {
   FiMenu,
   FiX,
@@ -42,7 +43,7 @@ const Header = () => {
         <div className="logo-and-toggle">
           <div className="logo-container">
             <img
-              src="./src/assets/logo.webp"
+              src={Logo}
               alt="PCS Global Logo"
               className="logo"
             />
@@ -83,10 +84,11 @@ const Header = () => {
 
        
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
-          <div className="nav-item" onClick={() => scrollToSection('home')}><span>Home</span></div>
+          <div className="nav-item"><Link to="/">Home</Link></div>
           <div className="nav-item" onClick={() => scrollToSection('services')}><span>Services</span></div>
           <div className="nav-item"><Link to="/about">About</Link></div>
           <div className="nav-item" onClick={() => scrollToSection('projects')}><span>Projects</span></div>
+          <div className="nav-item"><Link to="/our-history">About Us</Link></div>
           <div className="nav-item" onClick={() => scrollToSection('contact')}><span>Contact Us</span></div></div>
       </div>
     </div>

@@ -1,0 +1,155 @@
+.our-history-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .banner-carousel img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .ceo-message {
+    background: #f9f9f9;
+
+    .ceo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+
+      img {
+        width: 350px;
+        border-radius: 10px;
+      }
+
+      .ceo-content {
+        flex: 1;
+
+        h2 {
+          font-size: 2rem;
+          color: #2c3e50;
+        }
+
+        .ceo-subtitle {
+          font-style: italic;
+          margin: 0.5rem 0 1rem;
+          color: #555;
+        }
+      }
+    }
+  }
+
+  .gallery-carousel {
+    background: #fff;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .company-timeline {
+    background: #f0f4f8;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .timeline-box {
+        background: white;
+        padding: 1.5rem;
+        border-left: 4px solid #2c3e50;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+
+        h3 {
+          color: #2c3e50;
+        }
+      }
+    }
+  }
+
+  .mission-vision {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .mv-box {
+      background: #fff;
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      h2 {
+        color: #2c3e50;
+      }
+    }
+  }
+
+  .leadership-quotes {
+    background: #f9f9f9;
+    text-align: center;
+
+    .quote-box {
+      margin: 1rem auto;
+      max-width: 600px;
+      font-style: italic;
+
+      span {
+        display: block;
+        margin-top: 0.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+    }
+  }
+
+  .global-reach {
+    text-align: center;
+
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .stat-box {
+        background: #fff;
+        padding: 2rem;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 2rem;
+          color: #2c3e50;
+        }
+
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
