@@ -136,9 +136,7 @@ const Header = () => {
                     <div className="dropdown-panel-list">
                       <div className="item">
                         <div className="dropdown_menu-title">
-                          <Link to="/projects-completed"><p>Completed</p></Link>
-                          <Link to="/projects-ongoing"><p>Ongoing</p></Link>
-                          <Link to="/projects-upcoming"><p>Upcoming</p></Link>
+                          <Link to="/our-knowledge"><p>Our Knowledge</p></Link>
                         </div>
                       </div>
                     </div>
@@ -156,9 +154,9 @@ const Header = () => {
                     <div className="dropdown-panel-list">
                       <div className="item">
                         <div className="dropdown_menu-title">
-                          <Link to="/contact-form"><p>Contact Form</p></Link>
-                          <Link to="/contact-support"><p>Support</p></Link>
-                          <Link to="/contact-location"><p>Location</p></Link>
+                          <Link to="/contact"><p>Contact Form</p></Link>
+                          <Link to="/terms-conditions"><p>Terms & Conditions</p></Link>
+                          <Link to="/return-refund"><p>Return & Refund</p></Link>
                         </div>
                       </div>
                     </div>
