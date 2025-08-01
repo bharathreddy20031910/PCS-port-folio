@@ -84,12 +84,89 @@ const Header = () => {
 
        
         <div className={`nav-links ${isOpen ? 'show' : ''}`}>
-          <div className="nav-item"><Link to="/">Home</Link></div>
-          <div className="nav-item" onClick={() => scrollToSection('services')}><span>Services</span></div>
-          <div className="nav-item"><Link to="/about">About</Link></div>
-          <div className="nav-item" onClick={() => scrollToSection('projects')}><span>Projects</span></div>
-          <div className="nav-item"><Link to="/our-history">About Us</Link></div>
-          <div className="nav-item" onClick={() => scrollToSection('contact')}><span>Contact Us</span></div></div>
+          <div className="nav-item">
+            <Link to="/"><p>Home</p></Link>
+          </div>
+          <div className="nav-item">
+            <ul className="desktop-menu-category-list">
+              <li className="menu-category">
+                <a href="#" className="menu-title">Services</a>
+                <div className="dropdown-panel">
+                  <div className="downpannel_content">
+                    <div className="dropdown-panel-list">
+                      <div className="item">
+                        <div className="dropdown_menu-title">
+                          <Link to="/enterprise-web-solutions"><p>Enterprise Web Solutions</p></Link>
+                          <Link to="/branding-design-solutions"><p>Branding & Design</p></Link>
+                          <Link to="/marketing-solutions"><p>Marketing & Strategy</p></Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="nav-item">
+            <ul className="desktop-menu-category-list">
+              <li className="menu-category">
+                <a href="#" className="menu-title">About</a>
+                <div className="dropdown-panel">
+                  <div className="downpannel_content">
+                    <div className="dropdown-panel-list">
+                      <div className="item">
+                        <div className="dropdown_menu-title">
+                          <Link to="/about"><p>Company</p></Link>
+                          <Link to="/our-history"><p>Team</p></Link>
+                          <Link to="/about-careers"><p>Careers</p></Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="nav-item">
+            <ul className="desktop-menu-category-list">
+              <li className="menu-category">
+                <a href="#" className="menu-title">Projects</a>
+                <div className="dropdown-panel">
+                  <div className="downpannel_content">
+                    <div className="dropdown-panel-list">
+                      <div className="item">
+                        <div className="dropdown_menu-title">
+                          <Link to="/our-knowledge"><p>Our Knowledge</p></Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="nav-item">
+            <ul className="desktop-menu-category-list">
+              <li className="menu-category">
+                <a href="#" className="menu-title">Contact Us</a>
+                <div className="dropdown-panel">
+                  <div className="downpannel_content">
+                    <div className="dropdown-panel-list">
+                      <div className="item">
+                        <div className="dropdown_menu-title">
+                          <Link to="/contact"><p>Contact Form</p></Link>
+                          <Link to="/terms-conditions"><p>Terms & Conditions</p></Link>
+                          <Link to="/return-refund"><p>Return & Refund</p></Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   )
