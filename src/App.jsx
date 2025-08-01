@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import TeamShowcase from "./pages/TeamShowcase/TeamShowcase";
@@ -11,21 +11,29 @@ import OurKnowledge3 from "./pages/OurKnowledge";
 import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
+  const location = useLocation();
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions"];
+  const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
+
   return (
     <>
-      <Header />
+      {shouldShowHeader && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<TeamShowcase />} />
-        <Route path="/our-history" element={<OurHistory />} />
+        <Route path="/our-history" element={<TeamShowcase />} />
+        <Route path="/about" element={<OurHistory />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/return-refund" element={<ReturnRefund />} />
         <Route path="/our-knowledge" element={<OurKnowledge3 />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+
       <Footer />
       <footer>
-        <p style={{textAlign: 'center'}}>&copy; {new Date().getFullYear()} PCS Global. All rights reserved.</p>
+        <p style={{ textAlign: "center" }}>
+          &copy; {new Date().getFullYear()} PCS Global. All rights reserved.
+        </p>
       </footer>
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import know from "./kkkk.jpg"; // Assuming this is the correct path to the image
 import {
   Briefcase, Lightbulb, TrendingUp, Users, Code, Cloud, ChevronRight,
   Database, Coffee, Smartphone, Server, Wifi, FlaskConical, BrainCircuit
@@ -154,8 +155,8 @@ const OurKnowledge3 = () => {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black p-6 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://placehold.co/1920x1080/000000/ffffff?text=Background+Pattern')" }}></div>
+      <section ref={heroRef} className="relative h-[82vh] flex items-center justify-center p-6 overflow-hidden">
+        <div className="absolute inset-0 h-[82vh] bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${know})` }}></div>
         <div className="relative z-10 text-center max-w-5xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Future-Proof Your Business.
@@ -227,10 +228,10 @@ const OurKnowledge3 = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
+      {/* Footer Section
       <footer ref={el => sectionRefs.current[2] = el} className="py-12 px-6 bg-gray-950 text-white text-center">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} [Your Company Name]. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} [PCS GLOBAL Pvt. Ltd.]. All rights reserved.</p>
           <div className="mt-6 flex justify-center space-x-8">
             <a href="#" className="text-gray-400 hover:text-white transition duration-300">Privacy</a>
             <a href="#" className="text-gray-400 hover:text-white transition duration-300">Terms</a>
@@ -238,7 +239,7 @@ const OurKnowledge3 = () => {
             <a href="#" className="text-gray-400 hover:text-white transition duration-300">Blog</a>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
