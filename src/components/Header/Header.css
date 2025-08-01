@@ -164,7 +164,7 @@
     margin-top: 1rem;
     gap: 1.5rem;
     overflow: visible;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%); */
     background-color: #3b94f8;
     position: relative; /* Added for dropdown context */
   }
