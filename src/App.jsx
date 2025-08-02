@@ -1,12 +1,12 @@
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+
+
+
 import Privacypolicy from './components/Privacypolicy';
 import ReturnRefund from './components/Return-Refund';
 import TermsConditions from './components/Terms-Conditions';
-=======
+
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import {Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 
@@ -18,7 +18,7 @@ function App() {
   const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
 
   return (
-<<<<<<< HEAD
+
     <Router>
       <Routes>
         <Route path="/" element={<Header />} />
