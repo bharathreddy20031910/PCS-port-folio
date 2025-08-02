@@ -6,12 +6,17 @@ import ReturnRefund from './components/Return-Refund';
 import TermsConditions from './components/Terms-Conditions';
 =======
 import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header/Header";
 import Home from "./pages/Home";
->>>>>>> other-repo/Bharath-Reddy
 
 
 
 function App() {
+  const location = useLocation();
+  const hiddenHeaderPaths = ["/return-refund", "/terms-conditions"];
+  const shouldShowHeader = !hiddenHeaderPaths.includes(location.pathname);
+
   return (
 <<<<<<< HEAD
     <Router>
@@ -28,10 +33,27 @@ function App() {
 export default App;
 =======
     <>
-      <Home />
+      {shouldShowHeader && <Header />}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/our-history" element={<TeamShowcase />} />
+        <Route path="/about" element={<OurHistory />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/return-refund" element={<ReturnRefund />} />
+        <Route path="/our-knowledge" element={<OurKnowledge3 />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/about-careers" element={<Career/>} />
+      </Routes>
+
+      <Footer />
+      <footer>
+        <p style={{ textAlign: "center" }}>
+          &copy; {new Date().getFullYear()} PCS Global. All rights reserved.
+        </p>
+      </footer>
     </>
-  )
+  );
 }
 
 export default App
->>>>>>> other-repo/Bharath-Reddy

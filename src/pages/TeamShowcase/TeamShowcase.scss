@@ -1,0 +1,118 @@
+
+.team-showcase-container {
+  padding-top: 100px;
+
+.team-showcase {
+  padding: 2rem;
+
+  .top-banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    .member-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        max-width: 120px;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-weight: 600;
+        color: #333;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .driven-section {
+    text-align: center;
+    margin: 3rem 0;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+    }
+  }
+
+  .team-section {
+    margin-bottom: 3rem;
+
+    .team-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #111;
+        font-weight: 600;
+      }
+
+      button {
+        background: #007bff;
+        color: #fff;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #0056b3;
+        }
+      }
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+
+      .member-card {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+
+        img {
+          width: 100%;
+          max-width: 100px;
+          height: auto;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-weight: 500;
+          color: #333;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
+}
