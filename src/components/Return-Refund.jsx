@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { FaSearch, FaStickyNote, FaShieldAlt } from 'react-icons/fa';
+import React,{useState,useRef} from 'react'
+import { FaSearch, FaStickyNote,FaFacebookMessenger, FaShieldAlt } from 'react-icons/fa';
 import { FiHome } from 'react-icons/fi';    
 import Logo from '../assets/logopcs.webp';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,15 @@ import { useNavigate } from 'react-router-dom';
 const ReturnRefund = () => {
      const [searchTerm, setSearchTerm] = useState('');
      const navigate = useNavigate();
-    
+     const tangibleRef = useRef(null);
+      const applicabilityRef = useRef(null);
+      const cancelRef = useRef(null);
+
+      const refundRef = useRef(null);
+      const norefundRef = useRef(null); 
+      const contactRef = useRef(null);
+     
+  
       const highlightMatch = (text) => {
         if (!searchTerm) return text;
         const regex = new RegExp(`(${searchTerm})`, 'gi');
@@ -21,7 +29,9 @@ const ReturnRefund = () => {
           )
         );
       };
-
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div>
       
@@ -105,10 +115,36 @@ const ReturnRefund = () => {
        
       </section>
 
+<section className="p-5 pt-10 w-full flex flex-col lg:flex-row gap-10">
+
+ <div className="w-full lg:w-1/4 flex flex-col gap-8">
+          <div className="sticky top-10 shadow-md bg-white p-5 outline outline-2 outline-gray-300 rounded-3xl">
+
+            <h1 className="font-bold">Table of Contents</h1>
+            <p><a href="#applicability" onClick={()=>scrollToSection(applicabilityRef)} ref={applicabilityRef}>Applicability</a></p>
+            <p><a href="#tangible" onClick={()=>scrollToSection(tangibleRef)}  ref={tangibleRef}>Non-Tangible / Digital Services</a></p>
+            <p><a href="#cancel" onClick={()=>scrollToSection(cancelRef)} ref={cancelRef}>Cancellation Requests</a></p>
+            <p><a href="#refund" onClick={()=>scrollToSection(refundRef)} ref={refundRef}>Refund Eligibility</a></p>
+            <p><a href="#norefund" onClick={()=>scrollToSection(norefundRef)} ref={norefundRef}>No Refund Circumstances</a></p>
+            <p><a href="#contact" onClick={()=>scrollToSection(contactRef)} ref={contactRef}>Contact for Return & Refund Queries</a></p>
+           
+          </div>
+
+          <div className="shadow-md bg-gray-100 p-5 outline outline-2 outline-gray-300 rounded-3xl sticky top-70 ">
+            <h1 className="font-bold">Need help</h1>
+            <p>
+              <a href="#">Have questions about our Privacy practices?</a>
+            </p>
+            <button className="p-2 bg-black text-white rounded-2xl flex items-center mt-2">
+              <FaFacebookMessenger className="mr-2" />
+              Contact Refund Team
+            </button>
+          </div>
+        </div>
 
 
-        <div className="w-full lg:w-3/4 flex flex-col m-auto gap-10 mt-10">
-          <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+        <div className="w-full lg:w-3/4 flex flex-col  gap-10 ">
+          <section id='applicability' className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">1. Applicability</h1>
             <p className="mb-5 text-lg">
               This policy applies to all services, software solutions, digital products, and related deliverables purchased directly from PCS Global, via our website or through direct engagement.
@@ -116,7 +152,7 @@ const ReturnRefund = () => {
 
           </section>
 
-          <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+          <section id="tangible" className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">2. Non-Tangible / Digital Services</h1>
             <p className="mb-5 text-lg">
               As our services are primarily digital in nature — including but not limited to software development, cloud solutions, consulting, and custom IT deployments — returns are<b> not applicable once a service has been rendered or a project has been initiated.</b><br/>
@@ -128,7 +164,7 @@ const ReturnRefund = () => {
           
     
 
-<section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+<section id="cancel" className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">3. Cancellation Requests</h1>
             <p className="mb-5 text-lg">
               <li><b>	Before Service Initiation:</b> You may request cancellation within 48 hours of placing an order, provided that service delivery has not started.</li>
@@ -137,7 +173,7 @@ const ReturnRefund = () => {
 
           </section>
 
-                <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+                <section id='refund' className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">4. Refund Eligibility</h1>
             <p className="mb-5 text-lg">
               Refunds may be granted under the following limited conditions:
@@ -147,7 +183,7 @@ const ReturnRefund = () => {
 <p><b>Note:</b> Any approved refund will be processed within<b>7–10 business days</b>  to the original payment method</p>
           </section>
 
-          <section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+          <section id='norefund' className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">5. No Refund Circumstances</h1>
             <p className="mb-5 text-lg">
               <h1 className='text-xl'>Refunds will not be issued for:</h1>
@@ -161,7 +197,7 @@ const ReturnRefund = () => {
           </section>
 
 
-<section className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
+<section id='contact' className="bg-gray-10 p-5 rounded-3xl outline outline-2 outline-gray-300">
             <h1 className="mb-4 font-bold text-xl">6. Contact for Return & Refund Queries</h1>
             <p className="mb-5 text-lg">
                 <h1 className='text-xl'>For all return, cancellation, or refund-related concerns, please contact:</h1>
@@ -180,7 +216,7 @@ Kolkata, West Bengal – 700042<br/>
 
 
         </div>
-
+</section>
 
 
 

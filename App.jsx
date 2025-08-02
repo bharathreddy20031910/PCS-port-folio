@@ -1,19 +1,13 @@
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Privacypolicy from './components/Privacypolicy';
 import ReturnRefund from './components/Return-Refund';
 import TermsConditions from './components/Terms-Conditions';
-=======
-import React from "react";
-import Home from "./pages/Home";
->>>>>>> other-repo/Bharath-Reddy
 
 
 
 function App() {
   return (
-<<<<<<< HEAD
     <Router>
       <Routes>
         <Route path="/" element={<Header />} />
@@ -26,12 +20,3 @@ function App() {
 }
 
 export default App;
-=======
-    <>
-      <Home />
-    </>
-  )
-}
-
-export default App
->>>>>>> other-repo/Bharath-Reddy

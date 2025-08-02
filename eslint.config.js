@@ -7,9 +7,14 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
+<<<<<<< HEAD
     files: ['src***/**/*.{js,jsx}'],
     extends:
      [
+=======
+    files: ['**/*.{js,jsx}'],
+    extends: [
+>>>>>>> other-repo/Bharath-Reddy
       js.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
